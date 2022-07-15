@@ -1,54 +1,54 @@
 import * as React from "react"
 import { useRef } from "react"
-import { motion, useCycle } from "framer-motion"
-import { useDimensions } from "./UseDimensions"
-import { MenuToggle } from "./MenuToggle"
-import { Navigation } from "./Navigation"
+import { motion } from "framer-motion"
+import "./nav.css"
 
-const sidebar = {
-  open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
-    transition: {
-      type: "spring",
-      stiffness: 20,
-      restDelta: 2,
-    },
-  }),
-  closed: {
-    clipPath: "circle(30px at 40px 40px)",
-    transition: {
-      delay: 0.5,
-      type: "spring",
-      stiffness: 400,
-      damping: 40,
-    },
+const links = [
+  {
+    name: "DIETAS",
+    href: "#diet",
   },
-}
-
-const animateComplete = ({ isOpen }) => {
-  const nav = document.querySelector(".nav")
-  if (isOpen) {
-    nav.classList.toggle("open")
-  }
-}
+  {
+    name: "RUTINAS",
+    href: "#Rutines",
+  },
+  {
+    name: "CONTACTO",
+    href: "#Contact",
+  },
+]
 
 const Nav = () => {
-  const [isOpen, toggleOpen] = useCycle(false, true)
-  const containerRef = useRef(null)
-  const { height } = useDimensions(containerRef)
-
   return (
-    <motion.nav
-      initial={false}
-      animate={isOpen ? "open" : "closed"}
-      custom={height}
-      ref={containerRef}
-      className={`nav ${isOpen ? "open" : ""}`}
-    >
-      <motion.div className="background" variants={sidebar} />
-      <Navigation />
-      <MenuToggle toggle={() => toggleOpen()} />
-    </motion.nav>
+    <header className="header-container">
+      <nav className="container-nav">
+        <ul className="list-nav">
+          {links.map(({ name, href }, index) => {
+            return (
+              <motion.li
+                initial={{ x: -240 }}
+                animate={{ x: 0 }}
+                transition={{
+                  duration: 0.5,
+                  type: "spring",
+                  bounce: 0.6,
+                  delay: index * 0.1,
+                }}
+                className="item-list"
+                key={index}
+              >
+                <motion.a className="link" href={href}>
+                  {name}
+                </motion.a>
+              </motion.li>
+            )
+          })}
+        </ul>
+        <div className="container-bar">
+          <i class="ri-menu-fill"></i>
+        </div>
+      </nav>
+    </header>
   )
 }
 

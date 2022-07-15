@@ -1,0 +1,11 @@
+.container-home-content .container-title {
+  position: absolute;
+  left: 2rem;
+  top: 18rem;
+}
+
+.container-home-content .container-title h1 {
+  font-size: 5rem;
+  letter-spacing: 5px;
+  color: #fff;
+}
