@@ -3,97 +3,9 @@
 @import url("https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
-
-/* ============= VARIABLES CSS ============= */
-
-/* 
-  :root {
-    --nav-main-bg-color: #140e30;
-    --nav-hover-bg-color: #271c37;
-    --nav-border-color: #251e47;
-    --purple: #aaabca;
-    --success: #00b972;
-    --greeny: #4cb748;
-    --greeny-blue: #3cbdc2;
-    --gold: #bd9e59;
-    --strong-cyan: #18bd9b;
-    --pink: #c848c3;
-    --bright-pink: #ff2576;
-    --twilight: #565697;
-    --yellow: #ffc306;
-    --dark-violet: #252146;
-    --martinique: #2e2a4f;
-    --kinky-shark: #392b68;
-    --satiric-shark: #312955;
-    --arid-shark: #3b2d6a;
-    --chosen: #ad4cce;
-    --black-russian: #11172c;
-    --black: #000;
-    --warning: #ffb257;
-    --tags-soon: #6c65b4;
-    --general-white-100: #ffffff;
-    --general-base-100: #382f66;
-    --general-base-200: #2c274f;
-    --general-base-300: #252046;
-    --general-base-400: #1d1546;
-    --general-base-500: #151136;
-    --general-base-600: #211d41;
-    --general-grey-100: #b3b4d0;
-    --general-grey-200: #8890b5;
-    --general-grey-300: #6b6889;
-    --general-grey-400: #828396;
-    --general-dark-blue-100: #7375c9;
-    --general-dark-blue-200: #565895;
-    --general-dark-blue-300: #3a3c72;
-    --general-dark-blue-400: #333459;
-    --general-dark-blue-500: #25204a;
-    --general-blue-100: #85d0ff;
-    --general-blue-200: #38c6f4;
-    --general-blue-300: #36a5d7;
-    --general-blue-400: #3485ba;
-    --general-blue-500: #32649d;
-    --general-blue-600: #304480;
-    --general-gold-100: #f5d075;
-    --general-gold-200: #f2bf43;
-    --general-gold-300: #efaf15;
-    --general-gold-400: #8f680a;
-    --general-orange-100: #ff8916;
-    --general-orange-200: #fc7c00;
-    --general-orange-300: #c96403;
-    --general-orange-400: #6b4622;
-    --general-yellow-100: #ffb257;
-    --general-yellow-200: #614e3c;
-    --general-cherry-100: #d74661;
-    --general-cherry-200: #ce2c49;
-    --general-cherry-300: #a4233a;
-    --general-cherry-400: #691625;
-    --general-red-100: #e54787;
-    --general-red-200: #612658;
-    --general-green-100: #47cc42;
-    --general-green-200: #3ea83a;
-    --general-green-300: #33504b;
-    -webkit---general-light-green-100: #1dc49b;
-    --general-light-green-100: #1dc49b;
-    --general-purple-100: #bf3cd5;
-    --social-network-riot: #bf373b;
-    --social-network-google: #db4437;
-    --social-network-youtube: #e63621;
-    --social-network-faceit: #ff5500;
-    --social-network-reddit: #ff5700;
-    --social-network-steam: #5c7e0f;
-    background: #c31432;
-    background: -webkit-linear-gradient(
-      to right,
-      #240b36,
-      #c31432
-    );
-    background: linear-gradient(
-      to right,
-      #240b36,
-      #c31432
-    );
-  }
-*/
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 :root {
   /* =========== COLORS =========== */
@@ -116,7 +28,10 @@
   --body-font: "Patua One", cursive;
   --details-font: "La Belle Aurore", cursive;
   --info-font: "Roboto Mono", monospace;
+  --title-font: "Exo 2", sans-serif;
   --patua-font: "Patua One", cursive;
+  --merriweather-font: "Merriweather", serif;
+  --montserrat-font: "Montserrat", sans-serif;
   --default-size: 1.1rem;
   --bigger-size: 1.5rem;
   --big-size: 1.2rem;

@@ -1,11 +1,11 @@
 .container-home-content .container-title {
   position: absolute;
   left: 2rem;
-  top: 18rem;
+  top: 45%;
 }
 
 .container-home-content .container-title h1 {
-  font-size: 5rem;
+  font-size: 7rem;
   letter-spacing: 5px;
-  color: #fff;
+  font-family: var(--montserrat-font);
 }

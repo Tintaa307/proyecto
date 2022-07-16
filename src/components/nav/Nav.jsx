@@ -13,6 +13,13 @@ const links = [
     href: "#Rutines",
   },
   {
+    name: "TAVROSS",
+  },
+  {
+    name: "ABOUT US",
+    href: "#Contact",
+  },
+  {
     name: "CONTACTO",
     href: "#Contact",
   },
@@ -26,8 +33,8 @@ const Nav = () => {
           {links.map(({ name, href }, index) => {
             return (
               <motion.li
-                initial={{ x: -240 }}
-                animate={{ x: 0 }}
+                initial={{ y: -240 }}
+                animate={{ y: 0 }}
                 transition={{
                   duration: 0.5,
                   type: "spring",

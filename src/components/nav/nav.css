@@ -16,9 +16,11 @@
 }
 
 .header-container .container-nav ul li a {
-  font-family: var(--patua-font);
+  font-family: var(--montserrat-font);
   letter-spacing: 2.5px;
   color: #000;
+  background-color: tr;
+  text-decoration: none;
 }
 
 .header-container .container-nav .container-bar {
