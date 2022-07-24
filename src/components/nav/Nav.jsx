@@ -1,7 +1,9 @@
-import * as React from "react"
-import { useRef } from "react"
+import { useState } from "react"
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
 import "./nav.css"
+import ButtonConfig from "./ButtonConfig"
+import Settings from "../settings/Settings"
 
 const links = [
   {
@@ -13,19 +15,22 @@ const links = [
     href: "#Rutines",
   },
   {
-    name: "TAVROSS",
-  },
-  {
-    name: "ABOUT US",
-    href: "#Contact",
-  },
-  {
     name: "CONTACTO",
     href: "#Contact",
   },
 ]
 
 const Nav = () => {
+  const [isOpen, setIsOpen] = useState("")
+
+  const handleOpen = () => {
+    setIsOpen(isOpen === "" ? "open" : "")
+  }
+
+  const handleClose = () => {
+    setIsOpen("")
+  }
+
   return (
     <header className="header-container">
       <nav className="container-nav">
@@ -37,9 +42,7 @@ const Nav = () => {
                 animate={{ y: 0 }}
                 transition={{
                   duration: 0.5,
-                  type: "spring",
-                  bounce: 0.6,
-                  delay: index * 0.1,
+                  delay: index * 0.3,
                 }}
                 className="item-list"
                 key={index}
@@ -51,10 +54,13 @@ const Nav = () => {
             )
           })}
         </ul>
-        <div className="container-bar">
-          <i class="ri-menu-fill"></i>
-        </div>
       </nav>
+      <ButtonConfig
+        isOpen={isOpen}
+        handleClose={handleClose}
+        handleOpen={handleOpen}
+      />
+      <Settings isOpen={isOpen} />
     </header>
   )
 }

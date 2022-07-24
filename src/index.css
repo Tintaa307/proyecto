@@ -9,7 +9,7 @@
 
 :root {
   /* =========== COLORS =========== */
-  --color-main: #0600a3;
+  --color-main: #ec000f;
   --color-main-opaque: #001890;
   --color-main-light: #0049cf;
   --color-main-lighten: #0061de;
@@ -40,6 +40,7 @@
   --img-size: 50%;
   --icon-size: 1.3rem;
   --title-size: 1.7rem;
+  --big-word: 6rem;
   --special: 3rem;
 
   /* =========== TRANSITIONS =========== */
@@ -71,7 +72,7 @@ html {
 body {
   font-family: var(--body-font);
   font-size: var(--default-size);
-  background-color: var(--body-color);
+  background-color: #13131a;
 }
 
 h1,

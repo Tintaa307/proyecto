@@ -1,11 +1,160 @@
-.container-home-content .container-title {
+.container-main {
   position: absolute;
-  left: 2rem;
-  top: 45%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 84.2vh;
+  margin-top: 6rem;
 }
 
-.container-home-content .container-title h1 {
-  font-size: 7rem;
-  letter-spacing: 5px;
-  font-family: var(--montserrat-font);
+.container-main .container-home-content .container-img {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  width: 50%;
+}
+
+.container-main .container-home-content .container-img img {
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+
+.container-main .container-home-content .container-title {
+  position: absolute;
+  top: 80px;
+  left: 120px;
+  width: 90%;
+}
+
+.container-main .container-home-content .container-title h1 {
+  font-size: var(--big-word);
+  color: var(--body-color);
+  letter-spacing: 1.5px;
+  display: inline-block;
+  user-select: none;
+}
+
+.container-main .container-home-content .container-title p {
+  color: var(--body-color);
+  line-height: 30px;
+  font-size: var(--default-size);
+  padding-top: 1rem;
+  opacity: 0;
+  animation: appear 0.5s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+}
+
+.container-main .container-home-content .container-title p span {
+  font-size: var(--icon-size);
+}
+
+.container-main .container-home-content .container-title .container-buttons {
+  position: absolute;
+  top: 240px;
+  left: 0px;
+}
+
+.container-main
+  .container-home-content
+  .container-title
+  .container-buttons
+  button {
+  position: relative;
+  z-index: 2;
+  width: 200px;
+  height: 45px;
+  cursor: pointer;
+  margin: 0 10px;
+  background-color: transparent;
+  color: #fff;
+  font-size: var(--default-size);
+  border: 1px solid #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  opacity: 0;
+  animation: appear 0.5s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+  outline: none;
+}
+
+.container-main
+  .container-home-content
+  .container-title
+  .container-buttons
+  button
+  span {
+  position: relative;
+  z-index: 2;
+}
+
+.container-main
+  .container-home-content
+  .container-title
+  .container-buttons
+  button.btn1 {
+  margin-left: -50px;
+}
+
+.container-main
+  .container-home-content
+  .container-title
+  .container-buttons
+  button.btn1
+  div {
+  top: 0;
+  border-radius: 5px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-main);
+  clip-path: circle(0% at top left);
+  transition: clip-path 0.4s;
+}
+
+.container-main
+  .container-home-content
+  .container-title
+  .container-buttons
+  button.btn1:hover
+  div {
+  clip-path: circle(150% at top left);
+}
+
+.container-main
+  .container-home-content
+  .container-title
+  .container-buttons
+  button.btn2
+  div {
+  top: 0;
+  border-radius: 5px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-main);
+  z-index: 1;
+  clip-path: circle(0% at top left);
+  transition: clip-path 0.4s;
+}
+
+.container-main
+  .container-home-content
+  .container-title
+  .container-buttons
+  button.btn2:hover
+  div {
+  clip-path: circle(150% at top left);
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
