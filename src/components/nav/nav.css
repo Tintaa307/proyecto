@@ -18,17 +18,17 @@
   font-size: var(--icon-size);
 }
 
+header-container .container-nav ul li:hover {
+  transform: translateY(-5px);
+  transition: var(--transition);
+}
+
 .header-container .container-nav ul li a {
   font-family: var(--montserrat-font);
   letter-spacing: 2.5px;
   color: var(--body-color);
   text-decoration: none;
   font-size: var(--default-size);
-}
-
-.header-container .container-nav ul li a:hover {
-  color: var(--color-main);
-  transition: var(--transition);
 }
 
 .container-paleta {

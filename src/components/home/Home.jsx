@@ -9,22 +9,22 @@ const letters = [
     letter: "T",
   },
   {
-    letter: "a",
+    letter: "A",
   },
   {
-    letter: "v",
+    letter: "V",
   },
   {
-    letter: "r",
+    letter: "R",
   },
   {
-    letter: "o",
+    letter: "O",
   },
   {
-    letter: "s",
+    letter: "S",
   },
   {
-    letter: "s",
+    letter: "S",
   },
 ]
 

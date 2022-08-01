@@ -23,15 +23,18 @@
 .container-main .container-home-content .container-title {
   position: absolute;
   top: 80px;
-  left: 120px;
+  left: 100px;
   width: 90%;
 }
 
 .container-main .container-home-content .container-title h1 {
+  position: relative;
+  left: -30px;
   font-size: var(--big-word);
   color: var(--body-color);
   letter-spacing: 1.5px;
   display: inline-block;
+  font-family: var(--montserrat-font);
   user-select: none;
 }
 
@@ -44,6 +47,7 @@
   animation: appear 0.5s linear;
   animation-fill-mode: forwards;
   animation-delay: 3s;
+  font-family: var(--montserrat-font);
 }
 
 .container-main .container-home-content .container-title p span {

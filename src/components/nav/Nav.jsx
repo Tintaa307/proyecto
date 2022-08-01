@@ -40,9 +40,10 @@ const Nav = () => {
               <motion.li
                 initial={{ y: -240 }}
                 animate={{ y: 0 }}
+                whileHover={{ translateY: "-5px" }}
                 transition={{
-                  duration: 0.5,
-                  delay: index * 0.3,
+                  duration: 0.1,
+                  delay: index * 0.01,
                 }}
                 className="item-list"
                 key={index}
