@@ -4,6 +4,11 @@
   background-image: url("../.././assets/fondo-home.webp");
   background-size: cover;
   background-repeat: no-repeat;
+  display: block;
+}
+
+.header-container .container-nav.disappear {
+  display: none;
 }
 
 .header-container .container-nav {

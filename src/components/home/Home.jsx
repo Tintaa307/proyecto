@@ -3,6 +3,7 @@ import "./home.css"
 import Imagen from "../../assets/img-home.png"
 import { motion } from "framer-motion"
 import { useTypewriter } from "react-simple-typewriter"
+import { Link } from "react-router-dom"
 
 const letters = [
   {
@@ -28,7 +29,7 @@ const letters = [
   },
 ]
 
-const Home = () => {
+const Home = ({ handleAppear }) => {
   const { text, count } = useTypewriter({
     words: ["Fisico.", "Resistencia.", "Potencial.", "Energia.", "Salud."],
     typeSpeed: 100,
@@ -49,7 +50,7 @@ const Home = () => {
                   duration: 0.1,
                   type: "spring",
                   bounce: 0.6,
-                  delay: 0.5 * index,
+                  delay: 0.2 * index,
                 }}
                 key={index}
               >
@@ -62,11 +63,17 @@ const Home = () => {
             <span className="typing"> {text}</span>
           </p>
           <div className="container-buttons">
-            <motion.button className="btn1">
-              <span>Inicia Sesion</span> <div></div>
-            </motion.button>
+            <Link to={"/login"} className="link">
+              <motion.button onClick={handleAppear} className="btn1">
+                <a className="button" href="#">
+                  <span>LOG IN</span> <i></i>
+                </a>
+              </motion.button>
+            </Link>
             <motion.button className="btn2">
-              <div></div> <span>Comienza Ya!</span>
+              <a className="button" href="#">
+                <span>LOG IN</span> <i></i>
+              </a>
             </motion.button>
           </div>
         </div>

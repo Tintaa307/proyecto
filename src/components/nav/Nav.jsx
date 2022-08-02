@@ -20,7 +20,7 @@ const links = [
   },
 ]
 
-const Nav = () => {
+const Nav = ({ toggleAppear }) => {
   const [isOpen, setIsOpen] = useState("")
 
   const handleOpen = () => {
@@ -33,7 +33,7 @@ const Nav = () => {
 
   return (
     <header className="header-container">
-      <nav className="container-nav">
+      <nav className={["container-nav", toggleAppear].join(" ")}>
         <ul className="list-nav">
           {links.map(({ name, href }, index) => {
             return (
