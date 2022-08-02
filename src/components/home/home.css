@@ -57,81 +57,51 @@
 .container-main .container-home-content .container-title .container-buttons {
   position: absolute;
   top: 240px;
-  left: 0px;
+  left: -0px;
+  font-family: var(--montserrat-font);
 }
 
-.container-main
-  .container-home-content
-  .container-title
-  .container-buttons
-  button.btn1
-  a {
+a.btn2 {
   position: relative;
   background: #fff;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1.5em;
+  font-size: calc(var(--default-size) + 0.1rem);
   letter-spacing: 0.1em;
   font-weight: 400;
   padding: 10px 30px;
   transition: 0.5s;
+  display: inline-flex;
+  justify-content: center;
 }
 
-.container-main
-  .container-home-content
-  .container-title
-  .container-buttons
-  button.btn1
-  a:hover {
-  background: #4ee;
-  color: #4ee;
+a.btn2:hover {
+  background: var(--color-main);
+  color: var(--color-main);
   letter-spacing: 0.25em;
-  box-shadow: 0 0 35px #4ee;
+  box-shadow: 0 0 35px var(--color-main);
 }
 
-.container-main
-  .container-home-content
-  .container-title
-  .container-buttons
-  button.btn1
-  a
-  span {
-  position: relative;
-  z-index: 1;
-}
-
-.container-main
-  .container-home-content
-  .container-title
-  .container-buttons
-  button.btn1
-  a::before {
+a.btn2::before {
   content: "";
   position: absolute;
   inset: 2px;
   background: #27282c;
 }
 
-.container-main
-  .container-home-content
-  .container-title
-  .container-buttons
-  button.btn1
-  a
-  i {
+a.btn2 span {
+  position: relative;
+  z-index: 1;
+}
+
+a.btn2 i {
   position: absolute;
   inset: 0;
   display: block;
 }
 
-.container-main
-  .container-home-content
-  .container-title
-  .container-buttons
-  button.btn1
-  a
-  i::before {
+a.btn2 i::before {
   content: "";
   position: absolute;
   top: 0;
@@ -143,24 +113,12 @@
   transition: 0.5s;
 }
 
-.container-main
-  .container-home-content
-  .container-title
-  .container-buttons
-  button.btn1
-  a:hover
-  i::after {
+a.btn2:hover i::before {
   width: 20px;
-  left: 80%;
+  left: 20%;
 }
 
-.container-main
-  .container-home-content
-  .container-title
-  .container-buttons
-  button.btn1
-  a
-  i::after {
+a.btn2 i::after {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -172,84 +130,13 @@
   transition: 0.5s;
 }
 
-.container-main
-  .container-home-content
-  .container-title
-  .container-buttons
-  button.btn1
-  a:hover
-  i::before {
+a.btn2:hover i::after {
   width: 20px;
-  left: 20%;
+  left: 80%;
 }
 
-.container-main
-  .container-home-content
-  .container-title
-  .container-buttons
-  button
-  span {
-  position: relative;
-  z-index: 2;
-}
-
-.container-main
-  .container-home-content
-  .container-title
-  .container-buttons
-  button.btn1 {
-  margin-left: -50px;
-}
-
-.container-main
-  .container-home-content
-  .container-title
-  .container-buttons
-  button.btn1
-  div {
-  top: 0;
-  border-radius: 5px;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-main);
-  clip-path: circle(0% at top left);
-  transition: clip-path 0.4s;
-}
-
-.container-main
-  .container-home-content
-  .container-title
-  .container-buttons
-  button.btn1:hover
-  div {
-  clip-path: circle(150% at top left);
-}
-
-.container-main
-  .container-home-content
-  .container-title
-  .container-buttons
-  button.btn2
-  div {
-  top: 0;
-  border-radius: 5px;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-main);
-  z-index: 1;
-  clip-path: circle(0% at top left);
-  transition: clip-path 0.4s;
-}
-
-.container-main
-  .container-home-content
-  .container-title
-  .container-buttons
-  button.btn2:hover
-  div {
-  clip-path: circle(150% at top left);
+a.btn2:nth-child(2) {
+  margin-left: 40px;
 }
 
 @keyframes appear {

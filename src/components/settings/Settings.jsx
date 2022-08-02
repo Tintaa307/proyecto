@@ -29,6 +29,7 @@ const Settings = ({ isOpen }) => {
   const saveData = () => {
     localStorage.setItem("color", color)
   }
+
   return (
     <motion.div className={["container-settings", isOpen].join(" ")}>
       <div className="settings-content">

@@ -63,18 +63,14 @@ const Home = ({ handleAppear }) => {
             <span className="typing"> {text}</span>
           </p>
           <div className="container-buttons">
-            <Link to={"/login"} className="link">
-              <motion.button onClick={handleAppear} className="btn1">
-                <a className="button" href="#">
-                  <span>LOG IN</span> <i></i>
-                </a>
-              </motion.button>
-            </Link>
-            <motion.button className="btn2">
-              <a className="button" href="#">
+            <Link to={"/login"}>
+              <a onClick={handleAppear} className="btn2" href="#">
                 <span>LOG IN</span> <i></i>
               </a>
-            </motion.button>
+            </Link>
+            <a className="btn2" href="#">
+              <span>Comenzar</span> <i></i>
+            </a>
           </div>
         </div>
         <motion.div className="container-img"></motion.div>

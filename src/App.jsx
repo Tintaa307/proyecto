@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext, useState, useEffect } from "react"
 import reactLogo from "./assets/react.svg"
 import "./App.css"
 import Nav from "./components/nav/Nav"
@@ -9,10 +9,10 @@ import Login from "./components/login/Login"
 
 function App() {
   const { color } = useContext(ThemeContext)
-  const [toggleAppear, setToggleAppear] = useState("")
+  const [toggleAppear, setToggleAppear] = useState("appear")
 
   const handleAppear = () => {
-    setToggleAppear(toggleAppear === "" ? "disappear" : "")
+    setToggleAppear(toggleAppear === "appear" ? "disappear" : "appear")
   }
 
   return (
