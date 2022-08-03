@@ -22,46 +22,48 @@ const Register = () => {
   })
 
   return (
-    <div class="container">
-      <div class="content">
-        <form>
-          <h2 class="title">REGISTRARSE</h2>
+    <div class="container-register">
+      <div className="container-content">
+        <div class="content">
+          <form>
+            <h2 class="title">REGISTRARSE</h2>
 
-          <div class="input-div one ">
-            <div class="i">
-              <i class="fa fa-envelope"></i>
+            <div class="input-div one ">
+              <div class="i">
+                <i class="fa fa-envelope"></i>
+              </div>
+              <div class="div">
+                <h5>E-mail</h5>
+                <input type="email" class="input" />
+              </div>
             </div>
-            <div class="div">
-              <h5>E-mail</h5>
-              <input type="email" class="input" />
+            <div class="input-div one ">
+              <div class="i">
+                <i class="fa fa-user"></i>
+              </div>
+              <div class="div">
+                <h5>Username</h5>
+                <input type="text" class="input" />
+              </div>
             </div>
-          </div>
-          <div class="input-div one ">
-            <div class="i">
-              <i class="fa fa-user"></i>
+            <div class="input-div pass">
+              <div class="i">
+                <i class="fa fa-lock"></i>
+              </div>
+              <div class="div">
+                <h5>Password</h5>
+                <input type="password" class="input" />
+              </div>
             </div>
-            <div class="div">
-              <h5>Username</h5>
-              <input type="text" class="input" />
-            </div>
-          </div>
-          <div class="input-div pass">
-            <div class="i">
-              <i class="fa fa-lock"></i>
-            </div>
-            <div class="div">
-              <h5>Password</h5>
-              <input type="password" class="input" />
-            </div>
-          </div>
 
-          <div class="boton-neon">REGISTRARSE</div>
-          <div class="container-already">
-            <h5>
-              ¿Ya tienes una cuenta? <a href="#">Inicar sesión.</a>
-            </h5>
-          </div>
-        </form>
+            <div class="boton-neon">REGISTRARSE</div>
+            <div class="container-already">
+              <h5>
+                ¿Ya tienes una cuenta? <a href="#">Inicar sesión.</a>
+              </h5>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   )
