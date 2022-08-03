@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from "react"
 import "./home.css"
-import Imagen from "../../assets/img-home.png"
 import { motion } from "framer-motion"
 import { useTypewriter } from "react-simple-typewriter"
 import { Link } from "react-router-dom"

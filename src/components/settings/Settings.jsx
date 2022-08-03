@@ -53,27 +53,27 @@ const Settings = ({ isOpen }) => {
           <div className="container-content-temas">
             <div className="tema">
               <div onClick={changeColor} className="red">
-                <i id="red" class="ri-check-line"></i>
+                <i id="red" className="ri-check-line"></i>
               </div>
             </div>
             <div className="tema">
               <div onClick={changeColor} className="blue">
-                <i id="blue" class="ri-check-line"></i>
+                <i id="blue" className="ri-check-line"></i>
               </div>
             </div>
             <div className="tema">
               <div onClick={changeColor} className="orange">
-                <i id="orange" class="ri-check-line"></i>
+                <i id="orange" className="ri-check-line"></i>
               </div>
             </div>
             <div id="green" className="tema">
               <div onClick={changeColor} className="green">
-                <i id="green" class="ri-check-line"></i>
+                <i id="green" className="ri-check-line"></i>
               </div>
             </div>
             <div id="rosa" className="tema">
               <div onClick={changeColor} className="rosa">
-                <i id="rosa" class="ri-check-line"></i>
+                <i id="rosa" className="ri-check-line"></i>
               </div>
             </div>
           </div>

@@ -5,10 +5,10 @@ const ButtonConfig = ({ isOpen, handleClose, handleOpen }) => {
   return (
     <div className="container-icons-settings">
       <div className={["container-paleta", isOpen].join(" ")}>
-        <i onClick={handleOpen} class="ri-settings-5-line"></i>
+        <i onClick={handleOpen} className="ri-settings-5-line"></i>
       </div>
       <div className={["container-arrow-back", isOpen].join(" ")}>
-        <i onClick={handleClose} class="ri-arrow-left-line"></i>
+        <i onClick={handleClose} className="ri-arrow-left-line"></i>
       </div>
     </div>
   )

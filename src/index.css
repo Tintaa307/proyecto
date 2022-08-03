@@ -5,6 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 :root {
@@ -30,6 +31,7 @@
   --info-font: "Roboto Mono", monospace;
   --title-font: "Exo 2", sans-serif;
   --patua-font: "Patua One", cursive;
+  --poppins-font: "Poppins", sans-serif;
   --merriweather-font: "Merriweather", serif;
   --montserrat-font: "Montserrat", sans-serif;
   --default-size: 1.1rem;

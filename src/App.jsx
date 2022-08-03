@@ -6,6 +6,7 @@ import Home from "./components/home/Home"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import ThemeContext from "./context/ThemeContext"
 import Login from "./components/login/Login"
+import Register from "./components/register/Register"
 
 function App() {
   const { color } = useContext(ThemeContext)
@@ -23,6 +24,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home handleAppear={handleAppear} />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
           </Routes>
         </BrowserRouter>
       </div>

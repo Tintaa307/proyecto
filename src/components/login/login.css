@@ -5,14 +5,31 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   font-family: var(--montserrat-font);
 }
 
-.container {
-  width: 100vw;
-  height: 100vh;
-  padding: 6rem 2rem;
+.container-login .container-info-login {
+  width: 450px;
+  height: 450px;
+  border-radius: 15px;
+  background-color: #000;
+  display: block;
+  margin: auto;
+  position: relative;
+  top: 100px;
+}
+
+.container-login .container-back {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.container-login .container-back i {
+  color: #fff;
+  z-index: 3;
+  font-size: var(--title-size);
 }
 
 .content {
@@ -32,10 +49,10 @@ form {
 
 .content h2 {
   margin: 15px 0;
-  color: #15f4ee;
+  color: var(--color-main);
   text-transform: uppercase;
   font-size: 2.9rem;
-  text-shadow: 0 0 40px #15f4ee;
+  text-shadow: 0 0 40px var(--color-main);
 }
 
 .content .input-div {
@@ -72,8 +89,8 @@ form {
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
-  color: #15f4ee;
-  text-shadow: 0 0 40px #15f4ee;
+  color: var(--color-main);
+  text-shadow: 0 0 40px var(--color-main);
   font-size: 18px;
   transition: 0.3s;
 }
@@ -85,8 +102,8 @@ form {
   bottom: -2px;
   width: 0%;
   height: 2px;
-  background-color: #15f4ee;
-  box-shadow: 0 5px 5px 0 inset, 0 0 10px 0 #15f4ee;
+  background-color: var(--color-main);
+  box-shadow: 0 5px 5px 0 inset, 0 0 10px 0 var(--color-main);
   transition: 0.4s;
 }
 
@@ -128,7 +145,11 @@ form {
   margin-bottom: 4px;
 }
 
-a {
+.forgot {
+  margin-top: 20px;
+}
+
+.forgot a {
   display: block;
   text-align: right;
   text-decoration: none;
@@ -138,8 +159,8 @@ a {
   padding-bottom: 20px;
 }
 
-a:hover {
-  color: #15f4ee;
+.forgot a:hover {
+  color: var(--color-main);
 }
 
 /* -------------BOTON.---------- */
@@ -149,7 +170,7 @@ a:hover {
   text-align: center;
   font-size: 20px;
   padding: 10px;
-  color: #15f4ee;
+  color: var(--color-main);
   font-weight: 400;
   border: 2px solid;
   text-transform: uppercase;
@@ -160,5 +181,38 @@ a:hover {
 }
 
 .boton-neon:hover {
-  box-shadow: 0 5px 50px 0 inset, 0 5px 50px 0 #15f4ee;
+  box-shadow: 0 5px 50px 0 inset, 0 5px 50px 0 var(--color-main);
+}
+
+.container-login
+  .container-info-login
+  .container
+  .content
+  form
+  .container-createacc {
+  margin-top: 2rem;
+}
+
+.container-login
+  .container-info-login
+  .container
+  .content
+  form
+  .container-createacc
+  h5 {
+  color: #fff;
+}
+
+.container-login
+  .container-info-login
+  .container
+  .content
+  form
+  .container-createacc
+  h5
+  a {
+  color: var(--color-main);
+  padding-left: 1px;
+  padding-top: 2px;
+  transform: translate(0px);
 }

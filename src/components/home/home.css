@@ -61,6 +61,10 @@
   font-family: var(--montserrat-font);
 }
 
+.container-main .container-home-content .container-title .container-buttons a {
+  display: inline-block;
+}
+
 a.btn2 {
   position: relative;
   background: #fff;
