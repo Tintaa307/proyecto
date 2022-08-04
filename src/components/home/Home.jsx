@@ -62,10 +62,13 @@ const Home = ({ handleAppear }) => {
             <span className="typing"> {text}</span>
           </p>
           <div className="container-buttons">
-            <Link to={"/login"}>
-              <a onClick={handleAppear} className="btn2" href="#">
-                <span>LOG IN</span> <i></i>
-              </a>
+            <Link
+              to={"/login"}
+              onClick={handleAppear}
+              className="btn2"
+              href="#"
+            >
+              <span>LOG IN</span> <i></i>
             </Link>
             <a className="btn2" href="#">
               <span>Comenzar</span> <i></i>
