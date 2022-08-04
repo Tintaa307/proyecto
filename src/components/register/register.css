@@ -9,6 +9,18 @@
   font-family: var(--poppins-font);
 }
 
+.container-register .container-back-reg {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.container-register .container-back-reg i {
+  color: #fff;
+  z-index: 3;
+  font-size: var(--title-size);
+}
+
 .container-content {
   position: relative;
   top: 100px;
@@ -160,7 +172,7 @@ a:hover {
   cursor: pointer;
   margin-top: 20px;
   border-radius: 100px;
-  transition: 0.6s;
+  transition: 0.3s;
 }
 
 .boton-neon:hover {

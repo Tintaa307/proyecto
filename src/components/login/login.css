@@ -13,7 +13,7 @@
   width: 450px;
   height: 450px;
   border-radius: 15px;
-  background-color: #000;
+  background-color: transparent;
   display: block;
   margin: auto;
   position: relative;
@@ -213,7 +213,6 @@ form {
   h5
   .link {
   color: var(--color-main);
-  padding-left: 1px;
-  padding-top: 2px;
-  transform: translate(0px);
+  display: inline-block;
+  padding-left: 2px;
 }

@@ -1,26 +1,19 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import "./login.css"
 import { Link } from "react-router-dom"
 
 const Login = () => {
-  const inputs = document.querySelectorAll(".input")
+  const usernameRef = useRef(null)
+  const passwordRef = useRef(null)
 
-  function add() {
-    let parent = this.parentNode.parentNode
-    parent.classList.add("focus")
-  }
+  const [focused, setFocused] = useState(null)
 
-  function rem() {
-    let parent = this.parentNode.parentNode
-    if (this.value === "") {
-      parent.classList.remove("focus")
-    }
-  }
-
-  inputs.forEach((input) => {
-    input.addEventListener("focus", add)
-    input.addEventListener("blur", rem)
-  })
+  useEffect(() => {
+    console.log(focused)
+    usernameRef.current.parentNode.parentNode.classList.remove("focus")
+    passwordRef.current.parentNode.parentNode.classList.remove("focus")
+    if (focused) focused.current.parentNode.parentNode.classList.add("focus")
+  }, [focused])
 
   return (
     <div className="container-login">
@@ -36,7 +29,13 @@ const Login = () => {
                 </div>
                 <div className="div">
                   <h5>Usuario</h5>
-                  <input type="text" className="input" />
+                  <input
+                    type="text"
+                    className="input"
+                    ref={usernameRef}
+                    onClick={() => setFocused(usernameRef)}
+                    onBlur={() => setFocused(null)}
+                  />
                 </div>
               </div>
 
@@ -46,7 +45,13 @@ const Login = () => {
                 </div>
                 <div className="div">
                   <h5>Contraseña</h5>
-                  <input type="password" className="input" />
+                  <input
+                    type="password"
+                    className="input"
+                    ref={passwordRef}
+                    onClick={() => setFocused(passwordRef)}
+                    onBlur={() => setFocused(null)}
+                  />
                 </div>
               </div>
               <div className="forgot">
