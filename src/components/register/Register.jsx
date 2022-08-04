@@ -18,51 +18,51 @@ const Register = () => {
   }, [focused])
 
   return (
-    <div class="container-register">
+    <div className="container-register">
       <div className="container-content">
-        <div class="content">
+        <div className="content">
           <form>
-            <h2 class="title">REGISTRARSE</h2>
+            <h2 className="title">REGISTRARSE</h2>
 
-            <div class="input-div one ">
-              <div class="i">
-                <i class="fa fa-envelope"></i>
+            <div className="input-div one ">
+              <div className="i">
+                <i className="fa fa-envelope"></i>
               </div>
-              <div class="div">
+              <div className="div">
                 <h5>E-mail</h5>
                 <input
                   type="email"
-                  class="input"
+                  className="input"
                   ref={emailRef}
                   onClick={() => setFocused(emailRef)}
                   onBlur={() => setFocused(null)}
                 />
               </div>
             </div>
-            <div class="input-div one ">
-              <div class="i">
-                <i class="fa fa-user"></i>
+            <div className="input-div one ">
+              <div className="i">
+                <i className="fa fa-user"></i>
               </div>
-              <div class="div">
+              <div className="div">
                 <h5>Username</h5>
                 <input
                   type="text"
-                  class="input"
+                  className="input"
                   ref={usernameRef}
                   onClick={() => setFocused(usernameRef)}
                   onBlur={() => setFocused(null)}
                 />
               </div>
             </div>
-            <div class="input-div pass">
-              <div class="i">
-                <i class="fa fa-lock"></i>
+            <div className="input-div pass">
+              <div className="i">
+                <i className="fa fa-lock"></i>
               </div>
-              <div class="div">
+              <div className="div">
                 <h5>Password</h5>
                 <input
                   type="password"
-                  class="input"
+                  className="input"
                   ref={passwordRef}
                   onClick={() => setFocused(passwordRef)}
                   onBlur={() => setFocused(null)}
@@ -70,8 +70,8 @@ const Register = () => {
               </div>
             </div>
 
-            <div class="boton-neon">REGISTRARSE</div>
-            <div class="container-already">
+            <div className="boton-neon">REGISTRARSE</div>
+            <div className="container-already">
               <h5>
                 ¿Ya tienes una cuenta? <Link to={"/login"}>Inicar sesión.</Link>
               </h5>
