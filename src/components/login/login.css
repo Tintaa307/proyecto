@@ -192,6 +192,7 @@ form {
   .container-createacc {
   margin-top: 2rem;
   display: flex;
+  margin-left: 3rem;
 }
 
 .container-login

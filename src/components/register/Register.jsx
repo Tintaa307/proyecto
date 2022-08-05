@@ -10,11 +10,17 @@ const Register = () => {
   const [focused, setFocused] = useState(null)
 
   useEffect(() => {
-    console.log(focused)
-    usernameRef.current.parentNode.parentNode.classList.remove("focus")
-    passwordRef.current.parentNode.parentNode.classList.remove("focus")
-    emailRef.current.parentNode.parentNode.classList.remove("focus")
-    if (focused) focused.current.parentNode.parentNode.classList.add("focus")
+    if (
+      usernameRef.current.value === "" ||
+      passwordRef.current.value === "" ||
+      emailRef.current.value === ""
+    ) {
+      if (focused) focused.current.parentNode.parentNode.classList.add("focus")
+    } else {
+      usernameRef.current.parentNode.parentNode.classList.remove("focus")
+      passwordRef.current.parentNode.parentNode.classList.remove("focus")
+      emailRef.current.parentNode.parentNode.classList.remove("focus")
+    }
   }, [focused])
 
   return (
@@ -50,7 +56,7 @@ const Register = () => {
                   className="input"
                   ref={usernameRef}
                   onClick={() => setFocused(usernameRef)}
-                  onBlur={() => setFocused(null)}
+                  onBlur={() => setFocused(focused)}
                 />
               </div>
             </div>
