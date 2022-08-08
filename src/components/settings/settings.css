@@ -7,13 +7,13 @@
   height: 100vh;
   background-color: #13131a;
   transform: scale(0);
-  transform-origin: top left;
   overflow-y: scroll;
   overflow-x: hidden;
 }
 
 .container-settings.open {
   transform: scale(1);
+  transition: var(--transition);
 }
 
 .container-settings .settings-content .settings-title {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react"
+import React, { useState, useEffect, useContext, useRef } from "react"
 import "./home.css"
 import { motion } from "framer-motion"
 import { useTypewriter } from "react-simple-typewriter"
