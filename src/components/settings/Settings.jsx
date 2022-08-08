@@ -36,12 +36,12 @@ const Settings = ({ isOpen }) => {
         <div className="settings-title">
           <div onClick={handleSelected} id="temas" className="title">
             <h2 onClick={handleSelected} id="temas">
-              Temas
+              TEMAS
             </h2>
           </div>
           <div onClick={handleSelected} id="accesibilidad" className="title">
             <h2 onClick={handleSelected} id="accesibilidad">
-              Accesibilidad
+              ACCESIBILIDAD
             </h2>
           </div>
         </div>
