@@ -29,9 +29,8 @@ const Register = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
-  const saveUser = async () => {
+  const saveUser = async (e) => {
     await axios.post(URI, { name, email, password })
-
     navigate("/")
   }
 
@@ -57,9 +56,9 @@ const Register = () => {
         <div className="content">
           <Formik
             initialValues={{
-              username: "",
-              password: "",
-              email: "",
+              username: name,
+              password: password,
+              email: email,
             }}
             validationSchema={SignupSchema}
             onSubmit={(values) => {
@@ -83,8 +82,6 @@ const Register = () => {
                       innerRef={emailRef}
                       onClick={() => setFocused(emailRef)}
                       onBlur={() => setFocused(null)}
-                      value={email}
-                      //onChange={(e) => setEmail(e.target.value)}
                     />
                     {errors.email && touched.email ? (
                       <div className="error-email">{errors.email}</div>
@@ -104,8 +101,6 @@ const Register = () => {
                       innerRef={usernameRef}
                       onClick={() => setFocused(usernameRef)}
                       onBlur={() => setFocused(focused)}
-                      value={name}
-                      //onChange={(e) => setName(e.target.value)}
                     />
                     {errors.username && touched.username ? (
                       <div className="error-user">{errors.username}</div>
@@ -125,8 +120,6 @@ const Register = () => {
                       innerRef={passwordRef}
                       onClick={() => setFocused(passwordRef)}
                       onBlur={() => setFocused(null)}
-                      value={password}
-                      //onChange={(e) => setPassword(e.target.value)}
                     />
                     {errors.password && touched.password ? (
                       <div className="error-password">{errors.password}</div>
