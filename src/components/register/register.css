@@ -193,3 +193,30 @@ a:hover {
   padding: 0 0 0 0;
   display: inline-block;
 }
+
+.error-email {
+  color: #fff;
+  padding: 10px 10px;
+  position: absolute;
+  top: 10px;
+  left: 280px;
+  font-size: 1.5rem;
+}
+
+.error-user {
+  color: #fff;
+  padding: 10px 10px;
+  position: absolute;
+  top: 10px;
+  left: 310px;
+  font-size: 1.5rem;
+}
+
+.error-password {
+  color: #fff;
+  padding: 10px 10px;
+  position: absolute;
+  top: 10px;
+  left: 305px;
+  font-size: 1.5rem;
+}

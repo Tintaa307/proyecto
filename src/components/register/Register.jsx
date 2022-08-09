@@ -3,18 +3,21 @@ import { Link, useNavigate } from "react-router-dom"
 import "./register.css"
 import { Formik, Form, Field } from "formik"
 import * as Yup from "yup"
+import axios from "axios"
 
 const SignupSchema = Yup.object().shape({
   username: Yup.string()
     .min(3, "Too Short!")
-    .max(20, "Too Long!")
-    .required("Required"),
+    .max(15, "Too Long!")
+    .required("Username Required"),
   password: Yup.string()
     .min(7, "Too Short!")
     .max(20, "Too Long!")
-    .required("Required"),
-  email: Yup.string().email("Invalid email").required("Required"),
+    .required("Password Required"),
+  email: Yup.string().email("Invalid email").required("Email Required"),
 })
+
+const URI = "http://localhost:8000/usuarios/"
 
 const Register = () => {
   const usernameRef = useRef(null)
@@ -22,6 +25,15 @@ const Register = () => {
   const emailRef = useRef(null)
   const expReg = !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
   const navigate = useNavigate()
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+
+  const saveUser = async () => {
+    await axios.post(URI, { name, email, password })
+
+    navigate("/")
+  }
 
   const [focused, setFocused] = useState(null)
 
@@ -45,36 +57,37 @@ const Register = () => {
         <div className="content">
           <Formik
             initialValues={{
-              firstName: "",
-              lastName: "",
+              username: "",
+              password: "",
               email: "",
             }}
             validationSchema={SignupSchema}
             onSubmit={(values) => {
-              // same shape as initial values
+              saveUser()
               console.log(values)
             }}
           >
             {({ errors, touched }) => (
-              <form>
+              <Form autoComplete="off">
                 <h2 className="title">REGISTRARSE</h2>
-
                 <div className="input-div one ">
                   <div className="i">
                     <i className="fa fa-envelope"></i>
                   </div>
                   <div className="div">
                     <h5>E-mail</h5>
-                    <input
+                    <Field
                       name="email"
                       type="email"
                       className="input"
-                      ref={emailRef}
+                      innerRef={emailRef}
                       onClick={() => setFocused(emailRef)}
                       onBlur={() => setFocused(null)}
+                      value={email}
+                      //onChange={(e) => setEmail(e.target.value)}
                     />
                     {errors.email && touched.email ? (
-                      <div>{errors.email}</div>
+                      <div className="error-email">{errors.email}</div>
                     ) : null}
                   </div>
                 </div>
@@ -84,16 +97,18 @@ const Register = () => {
                   </div>
                   <div className="div">
                     <h5>Username</h5>
-                    <input
+                    <Field
                       name="username"
                       type="text"
                       className="input"
-                      ref={usernameRef}
+                      innerRef={usernameRef}
                       onClick={() => setFocused(usernameRef)}
                       onBlur={() => setFocused(focused)}
+                      value={name}
+                      //onChange={(e) => setName(e.target.value)}
                     />
                     {errors.username && touched.username ? (
-                      <div>{errors.username}</div>
+                      <div className="error-user">{errors.username}</div>
                     ) : null}
                   </div>
                 </div>
@@ -103,28 +118,31 @@ const Register = () => {
                   </div>
                   <div className="div">
                     <h5>Password</h5>
-                    <input
+                    <Field
                       name="password"
                       type="password"
                       className="input"
-                      ref={passwordRef}
+                      innerRef={passwordRef}
                       onClick={() => setFocused(passwordRef)}
                       onBlur={() => setFocused(null)}
+                      value={password}
+                      //onChange={(e) => setPassword(e.target.value)}
                     />
-                    {errors.pasword && touched.password ? (
-                      <div>{errors.password}</div>
+                    {errors.password && touched.password ? (
+                      <div className="error-password">{errors.password}</div>
                     ) : null}
                   </div>
                 </div>
-
-                <div className="boton-neon">REGISTRARSE</div>
+                <button type="submit" className="boton-neon">
+                  REGISTRARSE
+                </button>
                 <div className="container-already">
                   <h5>
                     ¿Ya tienes una cuenta?{" "}
                     <Link to={"/login"}>Inicar sesión.</Link>
                   </h5>
                 </div>
-              </form>
+              </Form>
             )}
           </Formik>
         </div>
