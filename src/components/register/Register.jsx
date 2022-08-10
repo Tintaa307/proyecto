@@ -19,18 +19,22 @@ const SignupSchema = Yup.object().shape({
 
 const URI = "http://localhost:8000/usuarios/"
 
+/*const EmailInput = (props) => {
+  return <input className="input" {...props} type="text" />
+}*/
+
 const Register = () => {
   const usernameRef = useRef(null)
   const passwordRef = useRef(null)
   const emailRef = useRef(null)
-  const expReg = !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+  //const expReg = !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
   const navigate = useNavigate()
-  const [name, setName] = useState("")
+  const [username, setUsername] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
-  const saveUser = async (e) => {
-    await axios.post(URI, { name, email, password })
+  const saveUser = async () => {
+    await axios.post(URI, { username, email, password })
     navigate("/")
   }
 
@@ -56,9 +60,9 @@ const Register = () => {
         <div className="content">
           <Formik
             initialValues={{
-              username: name,
-              password: password,
-              email: email,
+              username: "",
+              password: "",
+              email: "",
             }}
             validationSchema={SignupSchema}
             onSubmit={(values) => {
@@ -66,7 +70,7 @@ const Register = () => {
               console.log(values)
             }}
           >
-            {({ errors, touched }) => (
+            {({ errors, touched, handleChange, values }) => (
               <Form autoComplete="off">
                 <h2 className="title">REGISTRARSE</h2>
                 <div className="input-div one ">
@@ -76,12 +80,14 @@ const Register = () => {
                   <div className="div">
                     <h5>E-mail</h5>
                     <Field
-                      name="email"
+                      name={"email"}
                       type="email"
-                      className="input"
                       innerRef={emailRef}
                       onClick={() => setFocused(emailRef)}
                       onBlur={() => setFocused(null)}
+                      //as={EmailInput}
+                      value={values.email}
+                      onChange={handleChange}
                     />
                     {errors.email && touched.email ? (
                       <div className="error-email">{errors.email}</div>
@@ -95,12 +101,14 @@ const Register = () => {
                   <div className="div">
                     <h5>Username</h5>
                     <Field
-                      name="username"
+                      name={"username"}
                       type="text"
                       className="input"
                       innerRef={usernameRef}
                       onClick={() => setFocused(usernameRef)}
-                      onBlur={() => setFocused(focused)}
+                      onBlur={() => setFocused(null)}
+                      value={values.username}
+                      onChange={handleChange}
                     />
                     {errors.username && touched.username ? (
                       <div className="error-user">{errors.username}</div>
@@ -114,12 +122,14 @@ const Register = () => {
                   <div className="div">
                     <h5>Password</h5>
                     <Field
-                      name="password"
+                      name={"password"}
                       type="password"
                       className="input"
                       innerRef={passwordRef}
                       onClick={() => setFocused(passwordRef)}
                       onBlur={() => setFocused(null)}
+                      value={values.password}
+                      onChange={handleChange}
                     />
                     {errors.password && touched.password ? (
                       <div className="error-password">{errors.password}</div>
@@ -146,8 +156,6 @@ const Register = () => {
         </Link>
       </div>
     </div>
-
-    /**/
   )
 }
 
