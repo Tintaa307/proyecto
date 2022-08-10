@@ -29,12 +29,13 @@ const Register = () => {
   const emailRef = useRef(null)
   //const expReg = !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
   const navigate = useNavigate()
-  const [username, setUsername] = useState("")
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
 
-  const saveUser = async () => {
-    await axios.post(URI, { username, email, password })
+  const saveUser = async (values) => {
+    await axios.post(URI, {
+      nombre: values.username,
+      email: values.email,
+      contrasenia: values.password,
+    })
     navigate("/")
   }
 
@@ -66,7 +67,7 @@ const Register = () => {
             }}
             validationSchema={SignupSchema}
             onSubmit={(values) => {
-              saveUser()
+              saveUser(values)
               console.log(values)
             }}
           >

@@ -10,16 +10,16 @@ const Rutinas = () => {
       </div>
       <div className="container-grid">
         <div className="container-box">
-          <h1>LOREM</h1>
+          <h1>NOE</h1>
         </div>
         <div className="container-box">
-          <h1>LOREM</h1>
+          <h1>AMBAR</h1>
         </div>
         <div className="container-box">
-          <h1>LOREM</h1>
+          <h1>SOFIA</h1>
         </div>
         <div className="container-box">
-          <h1>LOREM</h1>
+          <h1>SUSY</h1>
         </div>
       </div>
       <div className="container-buttons">
@@ -27,6 +27,9 @@ const Rutinas = () => {
           <h1>
             MIS RUTINAS <i class="ri-heart-fill"></i>
           </h1>
+        </div>
+        <div className="container-create">
+          <h1>CREAR RUTINA +</h1>
         </div>
       </div>
     </div>

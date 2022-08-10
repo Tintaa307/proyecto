@@ -40,7 +40,11 @@
   transform: translateY(0px);
   transition: transform 0.2s ease-in-out;
 }
-
+.container-rutinas .container-grid .container-box::after {
+  content: "";
+  inset: 10px;
+  background-color: #000;
+}
 .container-rutinas .container-grid .container-box h1 {
   font-size: 2rem;
   margin-top: 25px;
@@ -48,6 +52,31 @@
 }
 
 .container-rutinas .container-grid .container-box:hover {
+  background-color: var(--color-main);
+  transition: var(--transition);
+  transform: translateY(-10px);
+}
+
+.container-rutinas .container-buttons {
+  display: flex;
+  text-align: center;
+  justify-content: right;
+  margin-right: 40px;
+  margin-top: -50px;
+}
+
+.container-rutinas .container-buttons .container-favs {
+  background-color: #fff;
+  padding: 10px;
+  transform: translateY(0px);
+  transition: transform 0.2s ease-in-out;
+  font-family: var(--montserrat-font);
+
+  border-radius: 5px;
+  margin-left: 400px;
+}
+
+.container-rutinas .container-buttons .container-favs:hover {
   background-color: var(--color-main);
   transition: var(--transition);
   transform: translateY(-10px);
