@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import ThemeContext from "./context/ThemeContext"
 import Login from "./components/login/Login"
 import Register from "./components/register/Register"
+import Rutinas from "./components/rutinas/Rutinas"
 
 function App() {
   const { color } = useContext(ThemeContext)

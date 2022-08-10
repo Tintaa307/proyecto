@@ -143,6 +143,10 @@ a.btn2:nth-child(2) {
   margin-left: 40px;
 }
 
+.rutinas {
+  margin-top: 6rem;
+}
+
 @keyframes appear {
   0% {
     opacity: 0;
