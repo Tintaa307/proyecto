@@ -1,10 +1,16 @@
 import React, { useEffect, useRef, useState } from "react"
 import "./login.css"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import { Field, Formik, Form } from "formik"
+import axios from "axios"
+
+const URI = "http://localhost:8000/usuarios"
 
 const Login = () => {
   const usernameRef = useRef(null)
   const passwordRef = useRef(null)
+  const navigate = useNavigate()
+  const [user, setUser] = useState([])
 
   const [focused, setFocused] = useState(null)
 
@@ -22,9 +28,8 @@ const Login = () => {
       <div className="container-info-login">
         <div className="container">
           <div className="content">
-            <form action="index.html">
+            <form autoComplete="off">
               <h2 className="title">Bienvenido</h2>
-
               <div className="input-div one ">
                 <div className="i">
                   <i className="fa fa-user"></i>
@@ -32,6 +37,7 @@ const Login = () => {
                 <div className="div">
                   <h5>Usuario</h5>
                   <input
+                    name="nombre"
                     type="text"
                     className="input"
                     ref={usernameRef}
@@ -48,6 +54,7 @@ const Login = () => {
                 <div className="div">
                   <h5>Contraseña</h5>
                   <input
+                    name="contrasenia"
                     type="password"
                     className="input"
                     ref={passwordRef}
@@ -59,7 +66,9 @@ const Login = () => {
               <div className="forgot">
                 <a href="#">¿Olvidó su Contraseña?</a>
               </div>
-              <div className="boton-neon">Ingresar</div>
+              <button type="submit" className="boton-neon">
+                Ingresar
+              </button>
               <div className="container-createacc">
                 <h5>
                   ¿No tienes cuenta? Create una{" "}

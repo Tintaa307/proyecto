@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import "./nav.css"
@@ -20,8 +20,10 @@ const links = [
   },
 ]
 
-const Nav = ({ toggleAppear }) => {
+const Nav = ({ path }) => {
   const [isOpen, setIsOpen] = useState("")
+
+  console.log(path)
 
   const handleOpen = () => {
     setIsOpen(isOpen === "" ? "open" : "")
@@ -33,7 +35,7 @@ const Nav = ({ toggleAppear }) => {
 
   return (
     <header className="header-container">
-      <nav className={["container-nav", toggleAppear].join(" ")}>
+      <nav className={["container-nav", path].join(" ")}>
         <ul className="list-nav">
           {links.map(({ name, href }, index) => {
             return (

@@ -4,9 +4,8 @@ import UserModel from "../models/usersModel.js"
 
 export const createUser = async (req, res) => {
   try {
-    console.log("aaaaa", req.body)
-    await UserModel.create(req.body)
-    res.json({ message: "user added" })
+    const data = await UserModel.create(req.body)
+    res.json({ message: "user added", data: data })
   } catch (error) {
     console.log(error)
   }

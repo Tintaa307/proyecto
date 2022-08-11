@@ -11,17 +11,26 @@ import Rutinas from "./components/rutinas/Rutinas"
 
 function App() {
   const { color } = useContext(ThemeContext)
-  const [toggleAppear, setToggleAppear] = useState("appear")
+  const [path, setPath] = useState("")
+
+  console.log(path)
 
   const handleAppear = () => {
-    setToggleAppear(toggleAppear === "appear" ? "disappear" : "appear")
+    if (
+      window.location.pathname === "/register" ||
+      window.location.pathname === "/login"
+    ) {
+      setPath("disappear")
+    } else {
+      setPath("")
+    }
   }
 
   return (
     <>
       <div color={color} className="container-all">
         <BrowserRouter>
-          <Nav toggleAppear={toggleAppear} />
+          <Nav path={path} />
           <Routes>
             <Route path="/" element={<Home handleAppear={handleAppear} />} />
             <Route path="/login" element={<Login />} />

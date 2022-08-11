@@ -36,7 +36,7 @@ const Register = () => {
       email: values.email,
       contrasenia: values.password,
     })
-    navigate("/")
+    navigate("/login")
   }
 
   const [focused, setFocused] = useState(null)
