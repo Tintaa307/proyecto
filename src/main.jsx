@@ -4,10 +4,14 @@ import App from "./App"
 import "./index.css"
 import { ThemeProvider } from "./context/ThemeContext"
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <ThemeProvider>
-      <App />
-    </ThemeProvider>
-  </React.StrictMode>
-)
+//const refresh = () => {
+setTimeout(() => {
+  ReactDOM.createRoot(document.getElementById("root")).render(
+    <React.StrictMode>
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
+    </React.StrictMode>
+  )
+}, 100)
+//}

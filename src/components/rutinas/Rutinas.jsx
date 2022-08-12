@@ -3,36 +3,72 @@ import "./rutinas.css"
 
 const Rutinas = () => {
   return (
-    <div className="container-rutinas">
-      <div className="container-title">
-        <h1>TITULO</h1>
-        <h3>AQUI PODRAS ELEGIR TU RUTINA FAVORITA</h3>
+    <body>
+      <div className="container-rutinas">
+        <div className="card">
+          <div className="box">
+            <div className="content">
+              <div className="icons">
+                <i class="ri-run-line"></i>
+              </div>
+              <h3>Basic</h3>
+              <h4>
+                <sup>$</sup>25
+              </h4>
+              <ul>
+                <li>10 GB SPACE</li>
+                <li>10 GB SPACE</li>
+                <li>10 GB SPACE</li>
+                <li>10 GB SPACE</li>
+              </ul>
+              <a href="#">Order now</a>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div className="card">
+          <div className="box">
+            <div className="content">
+              <div className="icons">
+                <i class="ri-heart-pulse-fill"></i>
+              </div>
+              <h3>Basic</h3>
+              <h4>
+                <sup>$</sup>25
+              </h4>
+              <ul>
+                <li>10 GB SPACE</li>
+                <li>10 GB SPACE</li>
+                <li>10 GB SPACE</li>
+                <li>10 GB SPACE</li>
+              </ul>
+              <a href="#">Order now</a>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div className="card">
+          <div className="box">
+            <div className="content">
+              <div className="icons">
+                <i class="fa-light fa-dumbbell"></i>
+              </div>
+              <h3>Basic</h3>
+              <h4>
+                <sup>$</sup>25
+              </h4>
+              <ul>
+                <li>10 GB SPACE</li>
+                <li>10 GB SPACE</li>
+                <li>10 GB SPACE</li>
+                <li>10 GB SPACE</li>
+              </ul>
+              <a href="#">Order now</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="container-grid">
-        <div className="container-box">
-          <h1>NOE</h1>
-        </div>
-        <div className="container-box">
-          <h1>AMBAR</h1>
-        </div>
-        <div className="container-box">
-          <h1>SOFIA</h1>
-        </div>
-        <div className="container-box">
-          <h1>SUSY</h1>
-        </div>
-      </div>
-      <div className="container-buttons">
-        <div className="container-favs">
-          <h1>
-            MIS RUTINAS <i class="ri-heart-fill"></i>
-          </h1>
-        </div>
-        <div className="container-create">
-          <h1>CREAR RUTINA +</h1>
-        </div>
-      </div>
-    </div>
+    </body>
   )
 }
 
