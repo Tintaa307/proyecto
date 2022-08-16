@@ -8,6 +8,8 @@ import ThemeContext from "./context/ThemeContext"
 import Login from "./components/login/Login"
 import Register from "./components/register/Register"
 import Rutinas from "./components/rutinas/Rutinas"
+import UserRutines from "./components/rutinas/UserRutines"
+import CreateRutines from "./components/rutinas/CreateRutines"
 
 function App() {
   const { color } = useContext(ThemeContext)
@@ -35,6 +37,8 @@ function App() {
             <Route path="/" element={<Home handleAppear={handleAppear} />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/me/rutines" element={<UserRutines />} />
+            <Route path="/create/rutine" element={<CreateRutines />} />
           </Routes>
         </BrowserRouter>
       </div>

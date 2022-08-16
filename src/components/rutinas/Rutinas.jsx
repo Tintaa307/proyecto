@@ -1,9 +1,10 @@
 import React from "react"
 import "./rutinas.css"
+import { Link } from "react-router-dom"
 
 const Rutinas = () => {
   return (
-    <section>
+    <section className="section">
       <div className="container">
         <div className="card">
           <div className="box">
@@ -90,6 +91,18 @@ const Rutinas = () => {
               <a href="#">Order Now</a>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="buttons-rutinas">
+        <div className="btn-rutina">
+          <Link to={"/me/rutinas"} className="link-rutines">
+            Mis Rutinas
+          </Link>
+        </div>
+        <div className="btn-rutina">
+          <Link to={"/create/rutine"} className="link-create">
+            Crear Rutina
+          </Link>
         </div>
       </div>
     </section>
