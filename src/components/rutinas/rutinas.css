@@ -1,4 +1,11 @@
-.container-rutinas {
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #232427;
+}
+
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,52 +14,90 @@
   padding: 100px 0 50px;
 }
 
-.container-rutinas .card {
+.container .card {
   position: relative;
   min-width: 320px;
   height: 500px;
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(0, 0, 0, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3),
-    -5px -5px 15px rgba(255, 255, 255, 0.1);
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   margin: 30px;
 }
 
-.container-rutinas .card .box {
+.container .card .box {
   position: absolute;
   top: 20px;
   left: 20px;
   right: 20px;
   bottom: 20px;
-  background-color: #2a2b2f;
+  background: #2a2b2f;
   border-radius: 15px;
   border: 2px solid #1e1f23;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
   display: flex;
-  justify-content: center;
+  justify-items: center;
   align-items: center;
+  justify-content: center;
   transition: transform 0.4s, box-shadow 0.4s;
 }
 
-.container-rutinas .card:hover .box {
+.container .card:hover .box {
   transform: translateY(-50px);
   box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5);
 }
 
-.container-rutinas .card .box .content {
+.container .card .box .content {
   padding: 20px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.container-rutinas .card .box .content .icon {
+.container .card .box .content .icon {
   position: relative;
   width: 80px;
   height: 80px;
-  background-color: var(--main-color);
+  background-color: red;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   margin-bottom: 10px;
+}
+
+.container .card .box .content .icon .ri-run-line {
+  color: #fff;
+  font-size: 2em;
+}
+
+.container .card .box .content h3 {
+  font-size: 1.8em;
+  color: #fff;
+  font-weight: 300;
+}
+
+.container .card .box .content h4 {
+  color: #fff;
+  font-size: 3em;
+  font-weight: 300;
+}
+
+.container .card .box .content h4 sup {
+  font-size: 0.75em;
+  font-weight: 300;
+}
+
+.container .card .box .content ul {
+  position: relative;
+}
+
+.container .card .box .content ul li {
+  list-style: none;
+  color: #fff;
+  margin: 5px 0;
+}
+
+.container .card .box .content ul li .ri-check-line {
+  color: #0f0;
 }

@@ -3,72 +3,96 @@ import "./rutinas.css"
 
 const Rutinas = () => {
   return (
-    <body>
-      <div className="container-rutinas">
+    <section>
+      <div className="container">
         <div className="card">
           <div className="box">
             <div className="content">
-              <div className="icons">
-                <i class="ri-run-line"></i>
+              <div className="icon">
+                <i class="ri-run-line" aria-hidden="true"></i>
               </div>
               <h3>Basic</h3>
               <h4>
                 <sup>$</sup>25
               </h4>
               <ul>
-                <li>10 GB SPACE</li>
-                <li>10 GB SPACE</li>
-                <li>10 GB SPACE</li>
-                <li>10 GB SPACE</li>
+                <li>
+                  <i class="ri-check-line" aria-hidden="true"></i>10 GB Space
+                </li>
+                <li>
+                  <i class="ri-check-line" aria-hidden="true"></i>10 GB Space
+                </li>
+                <li>
+                  <i class="ri-check-line" aria-hidden="true"></i>10 GB Space
+                </li>
+                <li>
+                  <i class="ri-check-line" aria-hidden="true"></i>10 GB Space
+                </li>
               </ul>
-              <a href="#">Order now</a>
+              <a href="#">Order Now</a>
             </div>
           </div>
         </div>
-        <br />
+
         <div className="card">
           <div className="box">
             <div className="content">
-              <div className="icons">
-                <i class="ri-heart-pulse-fill"></i>
+              <div className="icon">
+                <i class="ri-run-line" aria-hidden="true"></i>
               </div>
-              <h3>Basic</h3>
+              <h3>Cardio</h3>
               <h4>
-                <sup>$</sup>25
+                <sup>$</sup>40
               </h4>
               <ul>
-                <li>10 GB SPACE</li>
-                <li>10 GB SPACE</li>
-                <li>10 GB SPACE</li>
-                <li>10 GB SPACE</li>
+                <li>
+                  <i class="ri-check-line" aria-hidden="true"></i>20 GB Space
+                </li>
+                <li>
+                  <i class="ri-check-line" aria-hidden="true"></i>20 GB Space
+                </li>
+                <li>
+                  <i class="ri-check-line" aria-hidden="true"></i>20 GB Space
+                </li>
+                <li>
+                  <i class="ri-check-line" aria-hidden="true"></i>20 GB Space
+                </li>
               </ul>
-              <a href="#">Order now</a>
+              <a href="#">Order Now</a>
             </div>
           </div>
         </div>
-        <br />
+
         <div className="card">
           <div className="box">
             <div className="content">
-              <div className="icons">
-                <i class="fa-light fa-dumbbell"></i>
+              <div className="icon">
+                <i class="ri-run-line" aria-hidden="true"></i>
               </div>
-              <h3>Basic</h3>
+              <h3>Pro</h3>
               <h4>
-                <sup>$</sup>25
+                <sup>$</sup>65
               </h4>
               <ul>
-                <li>10 GB SPACE</li>
-                <li>10 GB SPACE</li>
-                <li>10 GB SPACE</li>
-                <li>10 GB SPACE</li>
+                <li>
+                  <i class="ri-check-line" aria-hidden="true"></i>60 GB Space
+                </li>
+                <li>
+                  <i class="ri-check-line" aria-hidden="true"></i>60 GB Space
+                </li>
+                <li>
+                  <i class="ri-check-line" aria-hidden="true"></i>60 GB Space
+                </li>
+                <li>
+                  <i class="ri-check-line" aria-hidden="true"></i>60 GB Space
+                </li>
               </ul>
-              <a href="#">Order now</a>
+              <a href="#">Order Now</a>
             </div>
           </div>
         </div>
       </div>
-    </body>
+    </section>
   )
 }
 
