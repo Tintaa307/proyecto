@@ -58,7 +58,7 @@ const Register = () => {
   return (
     <div className="container-register">
       <div className="container-content">
-        <div className="content">
+        <div className="content-register">
           <Formik
             initialValues={{
               username: "",
@@ -143,7 +143,9 @@ const Register = () => {
                 <div className="container-already">
                   <h5>
                     ¿Ya tienes una cuenta?{" "}
-                    <Link to={"/login"}>Inicar sesión.</Link>
+                    <Link className="inicia-sesion" to={"/login"}>
+                      Inicar sesión.
+                    </Link>
                   </h5>
                 </div>
               </Form>

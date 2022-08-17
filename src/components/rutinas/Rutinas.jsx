@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 const Rutinas = () => {
   return (
     <section className="section">
-      <div className="container">
+      <div className="container-section-rutines">
         <div className="card">
           <div className="box">
             <div className="content">
@@ -94,15 +94,17 @@ const Rutinas = () => {
         </div>
       </div>
       <div className="buttons-rutinas">
-        <div className="btn-rutina">
-          <Link to={"/me/rutinas"} className="link-rutines">
-            Mis Rutinas
-          </Link>
-        </div>
-        <div className="btn-rutina">
-          <Link to={"/create/rutine"} className="link-create">
-            Crear Rutina
-          </Link>
+        <div className="links-rutinas">
+          <div className="btn-rutina">
+            <Link to={"/me/rutinas"} className="link-rutines">
+              Mis Rutinas
+            </Link>
+          </div>
+          <div className="btn-rutina">
+            <Link to={"/create/rutine"} className="link-rutines">
+              Crear Rutina
+            </Link>
+          </div>
         </div>
       </div>
     </section>
