@@ -3,7 +3,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #232427;
+  background: #111111;
+}
+.section .container-rutines-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 20;
+  margin-bottom: 580px;
+}
+
+.section .container-rutines-title h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  font-family: var(--montserrat-font);
+  color: #fff;
 }
 
 .container-section-rutines {
@@ -60,7 +77,7 @@
   position: relative;
   width: 80px;
   height: 80px;
-  background-color: red;
+  background-color: var(--color-main);
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -72,6 +89,16 @@
 .container-section-rutines .card .box .content .icon .ri-run-line {
   color: #fff;
   font-size: 2em;
+}
+
+.container-section-rutines .card .box .content .icon .fa-dumbbell {
+  color: #fff;
+  font-size: 1.6em;
+}
+
+.container-section-rutines .card .box .content .icon .fa-heart-circle-plus {
+  color: #fff;
+  font-size: 1.6em;
 }
 
 .container-section-rutines .card .box .content h3 {
@@ -101,7 +128,7 @@
   margin: 5px 0;
 }
 
-.container .card .box .content ul li .ri-check-line {
+.ri-check-line {
   color: #0f0;
 }
 
@@ -109,7 +136,7 @@
   position: relative;
   display: inline-block;
   padding: 8px 20px;
-  background: red;
+  background: var(--color-main);
   margin-top: 15px;
   border-radius: 20px;
   text-decoration: none;

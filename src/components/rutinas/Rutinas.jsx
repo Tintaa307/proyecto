@@ -5,17 +5,20 @@ import { Link } from "react-router-dom"
 const Rutinas = () => {
   return (
     <section className="section">
+      <div className="container-rutines-title">
+        <h1>RUTINAS</h1>
+      </div>
       <div className="container-section-rutines">
         <div className="card">
           <div className="box">
             <div className="content">
               <div className="icon">
-                <i class="ri-run-line" aria-hidden="true"></i>
+                <i class="fa-solid fa-dumbbell"></i>
               </div>
-              <h3>Basic</h3>
-              <h4>
-                <sup>$</sup>25
-              </h4>
+              <h3>WIN MUSCLE </h3>
+              <div className="container-arrow">
+                <i class="ri-arrow-down-line"></i>
+              </div>
               <ul>
                 <li>
                   <i class="ri-check-line" aria-hidden="true"></i>10 GB Space
@@ -41,10 +44,10 @@ const Rutinas = () => {
               <div className="icon">
                 <i class="ri-run-line" aria-hidden="true"></i>
               </div>
-              <h3>Cardio</h3>
-              <h4>
-                <sup>$</sup>40
-              </h4>
+              <h3>CARDIO</h3>
+              <div className="container-arrow">
+                <i class="ri-arrow-down-line"></i>
+              </div>
               <ul>
                 <li>
                   <i class="ri-check-line" aria-hidden="true"></i>20 GB Space
@@ -68,12 +71,12 @@ const Rutinas = () => {
           <div className="box">
             <div className="content">
               <div className="icon">
-                <i class="ri-run-line" aria-hidden="true"></i>
+                <i class="fa-solid fa-heart-circle-plus"></i>
               </div>
-              <h3>Pro</h3>
-              <h4>
-                <sup>$</sup>65
-              </h4>
+              <h3>HEALTHY</h3>
+              <div className="contaner-arrow">
+                <i class="ri-arrow-down-line"></i>
+              </div>
               <ul>
                 <li>
                   <i class="ri-check-line" aria-hidden="true"></i>60 GB Space
